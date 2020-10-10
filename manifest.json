@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Twitch extention",
+  "version": "1.0.0",
+  "description": "Hide chat and auto collect gifts",
+  "permissions": ["tabs", "activeTab", "storage", "declarativeContent"],
+  "page_action": {
+    "default_popup": "popup/index.html",
+    "default_title": "Twitch extension"
+  },
+  "icons": {
+    "128": "./assets/icon.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["contentscript.js"],
+      "css": ["contentscript.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
