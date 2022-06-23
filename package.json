@@ -1,6 +1,6 @@
 {
   "name": "twitch-extention-hide-auto-collect",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Chrome extention to hide chat and auto collect gifts",
   "scripts": {
     "clean": "rm -rf dist && cpy manifest.json dist && cpy src/assets/* dist/assets",
