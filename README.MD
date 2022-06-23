@@ -17,4 +17,4 @@
 
 <img width="1792" alt="image" src="https://user-images.githubusercontent.com/35460122/175376683-89d8c36c-4a19-4fbd-a922-d58fd829e0ac.png">
 
-4. Select the dist folder from the extension.zip or if you build the project yourself run ```npm install && yarn build```
+4. Select the dist folder from the extension.zip or if you build the project yourself run ```yarn install && yarn build```
