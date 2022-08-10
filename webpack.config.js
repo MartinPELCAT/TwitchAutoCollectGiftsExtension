@@ -1,6 +1,8 @@
 const { CheckerPlugin } = require("awesome-typescript-loader");
 const { optimize } = require("webpack");
 const { join } = require("path");
+const CopyPlugin = require("copy-webpack-plugin");
+
 let prodPlugins = [];
 
 if (process.env.NODE_ENV === "production") {
@@ -29,7 +31,16 @@ module.exports = {
       },
     ],
   },
-  plugins: [new CheckerPlugin(), ...prodPlugins],
+  plugins: [
+    new CheckerPlugin(),
+    ...prodPlugins,
+    new CopyPlugin({
+      patterns: [
+        { from: "manifest.json", to: "" },
+        { from: "src/assets", to: "assets" },
+      ],
+    }),
+  ],
   resolve: {
     extensions: [".ts", ".js"],
   },
