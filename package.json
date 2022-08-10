@@ -4,7 +4,7 @@
   "description": "Chrome extention to hide chat and auto collect gifts",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "yarn clean && NODE_ENV=production webpack --config webpack.config.js",
+    "build": "yarn clean && NODE_ENV=production webpack --config webpack.config.js && yarn zip",
     "zip": "bestzip extension.zip dist/*"
   },
   "keywords": [
